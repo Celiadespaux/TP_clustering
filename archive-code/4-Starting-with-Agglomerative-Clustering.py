@@ -10,8 +10,9 @@ from sklearn import metrics
 ###################################################################
 # Exemple : Agglomerative Clustering
 
-
-path = '../artificial/'
+import os
+print("LA "+  os.getcwd())
+path = './artificial/'
 name="square1.arff"
 
 #path_out = './fig/'

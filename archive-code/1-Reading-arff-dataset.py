@@ -23,14 +23,14 @@ from scipy.io import arff
 # chaque jeu de données contient aussi un numéro de cluster : on ignore
 
 
-path = '../artificial/'
+path = './artificial/'
 name="square1.arff"
 #path_out = './fig/'
 
 databrut = arff.loadarff(open(path+str(name), 'r'))
 datanp = np.array([[x[0],x[1]] for x in databrut[0]])
-#print(databrut)
-#print(datanp)
+print(databrut)
+print(datanp)
 
 # PLOT données (en 2D) avec un scatter plot
 # Extraire chaque valeur des features pour en faire une liste
