@@ -143,7 +143,7 @@ for j in range(2):
         plt.scatter(datanp[:, 0], datanp[:, 1], s=8)
         plt.subplot(2, 3, 3 + i+1)
         plt.plot(range(2,31), silhouette_scores)
-        plt.title(f"{name} | Total time = {time_tot}")
+        plt.title(f"{name} | Total time = {time_tot}s")
 
     plt.show()
 
@@ -161,7 +161,7 @@ for j in range(2):
         time_init = time.time()
 
         for k in range(2,31) : 
-            model = cluster.MiniBatchKMeans(n_clusters=k, init='k-means++', max_iter=15, batch_size=8192, verbose=0, compute_labels=True, random_state=None, tol=0.0, max_no_improvement=5, init_size=None, n_init=1, reassignment_ratio=0.01)
+            model = cluster.MiniBatchKMeans(n_clusters=k, init='k-means++', max_iter=10, batch_size=4096, verbose=0, compute_labels=True, random_state=None, tol=0.0, max_no_improvement=5, init_size=None, n_init='auto', reassignment_ratio=0.01)
             model.fit(datanp)
             labels = model.labels_
             silhouette_scores.append(silhouette_score(datanp, labels))
@@ -169,7 +169,7 @@ for j in range(2):
         time_tot = np.round(time.time() - time_init, 2)
         plt.subplot(2, 3, j*3 + i+1)
         plt.plot(range(2,31), silhouette_scores)
-        plt.title(f"{name} | Total time = {time_tot}")
+        plt.title(f"{name} | Total time = {time_tot}s")
 
 plt.show()
 
