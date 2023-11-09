@@ -75,10 +75,10 @@ plt.title("silhouette_scores en fonction du nombre de cluster avec le linkage av
 plt.show()
 
 ###################### 3.3 ######################
-# Jeux de données qui fonctionnent bien avec le linkage ward
+# Jeux de données qui fonctionnent bien avec le linkage single
 # ["lsun.arff", "3MC.arff", "zelnik5.arff"] 
 
-# Nous avons regrouppé ensemble 3 jeux de données qu'on pense être adaptés pour l'utilisation de k-means (première liste) et 3 non adaptés (deuxième liste)
+# Nous avons regrouppé ensemble 3 jeux de données qu'on pense être adaptés pour l'utilisation du clustering agglomératif avec un linkage ward (première liste) et 3 non adaptés (deuxième liste)
 names = [["diamond9.arff", "R15.arff", "spherical_4_3.arff"], ["ds2c2sc13.arff", "zelnik1.arff", "zelnik5.arff"]]
 
 for j in range(2):

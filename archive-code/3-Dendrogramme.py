@@ -88,7 +88,4 @@ for linkage_type in linkages:
 
 print(f"Temps de calcul en faisant varier le nombre de clusters pour les différents types de linkages : \n{time_linkages}")
 
- 
-
 #######################################################################
-
